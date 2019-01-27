@@ -1,0 +1,23 @@
+
+<div *ngIf="activeList; else text">
+  <table class="table table-striped table-dark">
+    <thead>
+    <tr>
+      <th scope="col">Name Todos</th>
+      <th scope="col">Info Todose</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let todo of todos">
+      <td>{{todo.name}}</td>
+      <td>{{todo.text}}</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<ng-template #text>
+  <div>Пока нет задач</div>
+</ng-template>
+

@@ -1,0 +1,11 @@
+<form (ngSubmit)="onSubmitHandler(form)" #form="ngForm" novalidate>
+  <div class="form-group">
+    <label for="exampleInputName">Имя задачи</label>
+    <input type="text" ngModel class="form-control" id="exampleInputName" minlength="5" name="name" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputInfo">Информацыя о задачи</label>
+    <input type="text"  ngModel class="form-control" id="exampleInputInfo" minlength="10" name="text"  required>
+  </div>
+  <button [disabled]="form.invalid" type="submit" class="btn btn-primary" >Submit</button>
+</form>
